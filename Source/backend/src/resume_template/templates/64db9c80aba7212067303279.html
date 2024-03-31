@@ -1,0 +1,420 @@
+<html>
+  <head>
+    <style>
+      html {
+        -webkit-print-color-adjust: exact;
+      }
+      .profile i {
+        margin: 0px 5px;
+        font-size: 18px;
+      }
+      .pageBreak {
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+      .template1 {
+        padding: 0px 20px;
+        background-color: #fff;
+        color: #000;
+        font-family: times;
+        width: 1000px;
+      }
+      .template2 {
+        background-color: #fff;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        font-family: times;
+        width: 100%;
+      }
+      .profile i {
+        margin: 0 5px;
+        font-size: 18px;
+      }
+      .profile {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #fff;
+      }
+      .row_close {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .profile_col_head {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #213456;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .profile_col_head * {
+        margin: 10px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .profile .user_name {
+        font-size: 30px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .profile_col_info {
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 20px;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .profile_end_design {
+        background-color: #213456;
+        flex-basis: 0;
+        flex-grow: 0.1;
+      }
+      .education {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        flex-basis: 0;
+        flex-grow: 1.5;
+      }
+      .container_template2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-wrap: wrap;
+      }
+      .education .Heading {
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .education span {
+        margin: 0 3px;
+      }
+      .row_full {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .row_far2 {
+        width: calc(100% - 20px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .education hr,
+      .skills hr,
+      .work hr,
+      .awards hr {
+        width: 100%;
+        border: none;
+        border-bottom: dotted 2px #000;
+        vertical-align: baseline;
+      }
+      .work hr {
+        width: 100%;
+        border: none;
+        border-bottom: dotted 2px #000;
+        vertical-align: baseline;
+        flex-basis: 0;
+        flex-grow: 3.7;
+      }
+      .projects hr {
+        width: 100%;
+        border: none;
+        border-bottom: dotted 2px #000;
+        vertical-align: baseline;
+      }
+      .education .collegeName {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .template2_column {
+        margin: 8px;
+      }
+      .skills {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-wrap: nowrap;
+      }
+      .skills .Heading {
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .skills .skillName {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .skill_row {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .edcation_column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .work {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .work .Heading {
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .work_row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2px 0;
+      }
+      .work_row .companyName {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .work_row .jobLocation {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+      .template2_job {
+        margin: 0 40px;
+      }
+      .template2_job li {
+        margin: 5px 0;
+      }
+      .work_row * {
+        margin: 0 3px;
+      }
+      .template2 li {
+        list-style-position: inside;
+      }
+      .projects {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .projects .Heading {
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .projects .projectName {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .projectLink,
+      .projectDescription {
+        margin: 0 3px;
+      }
+      .awards {
+        margin: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .awards .Heading {
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+      .template2_column span {
+        margin: 0 3px;
+      }
+      .template2_column .awardName {
+        font-size: 16px;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+      .awardDate {
+        margin: 3px 0;
+        font-size: 16px;
+      }
+      .awarder {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="template1">
+      <div class="profile" data-reactroot="">
+        <div class="profile_col_head">
+          <div style="background-color: #213456" class="user_name">
+            {{contact.full_name | default('')}}
+          </div>
+          <div class="Portfolio">Full Stack Developer</div>
+        </div>
+        <div class="profile_col_info">
+          <div class="Address">{{contact.city | default('')}}, {{contact.state | default('')}}, {{contact.country | default('')}}</div>
+          <div class="Email">{{contact.email | default('')}}</div>
+          <div class="Mobile">{{contact.phone_number | default('')}}</div>
+          <div class="LinkedIn">
+            {{contact.linkedin_url | default('')}}
+          </div>
+        </div>
+        <div style="background-color: #213456" class="profile_end_design"></div>
+      </div>
+      <div class="container_template2" data-reactroot="">
+        <div class="skills">
+          <div class="row_full">
+            <div class="Heading">Skills</div>
+            <hr />
+          </div>
+          <div class="skill_row">
+            <div class="template2_column">
+              <div class="row_close">
+                <div class="skillDetail">{{skills | default('')}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if experience %}
+      <div class="work" data-reactroot="">
+        <div class="row_full">
+          <div class="Heading">Work Experience</div>
+          <hr />
+        </div>
+        {% for job in experience %}
+        <div class="template2_column pageBreak">
+          <div class="work_row">
+            <div class="companyName">{{job.company | default('')}}</div>
+            <div class="jobLocation">{{job.location | default('')}}</div>
+          </div>
+          <div class="work_row">
+            <div class="jobTitle">{{job.role | default('')}},</div>
+            <div class="date">{{job.exp_start | default('')}} - {{job.exp_end | default('')}}</div>
+          </div>
+          <div class="template2_job">
+            {{job.activity | default('')}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if education %}
+      <div class="education">
+          <div class="row_full">
+            <div class="Heading">Education</div>
+            <hr />
+          </div>
+          <div class="edcation_column">
+            {% for edu in education %}
+            <div class="template2_column pageBreak">
+              <div class="row_close">
+                <div class="collegeName">{{edu.university | default('')}}</div>
+                <div class="collegeLocation">{{edu.location | default('')}}</div>
+              </div>
+              <div class="row_close">
+                <div class="Degree">{{edu.degree | default('')}}</div>
+                <div class="Major">{{edu.specialization | default('')}}</div>
+                <div class="row_close">
+                  <div class="Earn year">{{edu.earn_year | default('Not provided')}}</div>
+                </div>
+              </div>
+              <div class="row_close">
+                <div class="GPA">
+                  GPA:
+                  {{edu.gpa | default('')}}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if project %}
+      <div class="projects" data-reactroot="">
+        <div class="row_full">
+          <div class="Heading">Projects</div>
+          <hr />
+        </div>
+        {% for proj in project %}
+        <div class="template2_column pageBreak">
+          <div class="work_row">
+            <div class="projectName">{{proj.title | default('')}}</div>
+          </div>
+          <div class="projectDescription">
+            {{proj.content | default('')}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+       {% endif %}
+      {% if certification %}
+      <div class="awards" data-reactroot="">
+        <div class="row_full">
+          <div class="Heading">Certificates</div>
+          <hr />
+        </div>
+        <div class="">
+          {% for cert in certification %}
+          <div class="template2_column pageBreak">
+            <div class="row_far2">
+              <div class="awardName">{{cert.name | default('')}}</div>
+              <div class="awarder">{{cert.where | default('')}}</div>
+            </div>
+            <div class="summary">
+              {{cert.relevant | default('')}}
+            </div>
+            <div class="awardDate">{{cert.get_year | default('')}}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

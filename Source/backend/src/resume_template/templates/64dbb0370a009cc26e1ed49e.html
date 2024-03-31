@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume</title>
+
+        <!-- add the bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <style>
+            /* custom CSS for the resume */
+            body {
+                padding: 20px;
+            }
+            h2 {
+                color: #3465A4;
+                padding-top: 20px;
+            }
+            h4 {
+                color: #555;
+                margin-top: 10px;
+            }
+            a {
+                color: #3465A4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">{{exp | default('Not provided')}}</h1>
+
+            <hr>
+
+            {% if contact %}
+            <h2>Contact Information</h2>
+            <ul class="list-unstyled">
+                <li>Full name: {{contact.full_name | default('Not provided')}}</li>
+                <li>Email: {{contact.email | default('Not provided')}}</li>
+                <li>Phone number: {{contact.phone_number | default('Not provided')}}</li>
+                <li>LinkedIn: <a href="{{contact.linkedin_url | default('#')}}">LinkedIn</a></li>
+                <li>Website: <a href="{{contact.personal_website | default('#')}}">Website</a></li>
+                <li>City: {{contact.city | default('Not provided')}}</li>
+                <li>State: {{contact.state | default('Not provided')}}</li>
+                <li>Country: {{contact.country | default('Not provided')}}</li>
+            </ul>
+            {% endif %}
+
+            {% if skills %}
+            <h2>Skills</h2>
+            <p>{{skills | default('Not provided')}}</p>
+            {% endif %}
+
+            {% if experience %}
+            <h2>Experience</h2>
+            {% for job in experience %}
+                <h4>{{job.role | default('Not provided')}} at {{job.company | default('Not provided')}}</h4>
+                <p>From {{job.exp_start | default('Not provided')}} to {{job.exp_end | default('Not provided')}}</p>
+                <p>Location: {{job.location | default('Not provided')}}</p>
+                <div>Description:<br> {{job.activity | default('Not provided')}}</div>
+            {% endfor %}
+            {% endif %}
+
+            {% if project %}
+
+            <h2>Projects</h2>
+            {% for proj in project %}
+                <h4>{{proj.title | default('Not provided')}} at {{proj.organization | default('Not provided')}}</h4>
+                <p>From {{proj.pro_start | default('Not provided')}} to {{proj.pro_end | default('Not provided')}}</p>
+                <div>Description:<br> {{proj.content | default('Not provided')}}</div>
+            {% endfor %}
+            {% endif %}
+
+            {% if education %}
+            <h2>Education</h2>
+            {% for edu in education %}
+                <h4>{{edu.degree | default('Not provided')}} from {{edu.university | default('Not provided')}}</h4>
+                <p>Year: {{edu.earn_year | default('Not provided')}}, Location: {{edu.location | default('Not provided')}}</p>
+                <p>GPA: {{edu.gpa | default('Not provided')}}, Specialization: {{edu.specialization | default('Not provided')}}</p>
+            {% endfor %}
+            {% endif %}
+
+            {% if certification %}
+            <h2>Certifications</h2>
+            {% for cert in certification %}
+                <h4>{{cert.name | default('Not provided')}} from {{cert.where | default('Not provided')}}</h4>
+                <p>Year: {{cert.get_year | default('Not provided')}}</p>
+                <p>Relevance: {{cert.relevant | default('Not provided')}}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+</html>

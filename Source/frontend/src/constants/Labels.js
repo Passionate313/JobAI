@@ -1,0 +1,11 @@
+export const CREATE_RESUME = "Create a new resume";
+export const DASHBOARD = "Dashboard";
+export const AUTO_APPLY = "Auto apply";
+export const MAIL_BOX = "Mail Box";
+export const SCHEDULE = "Schedule";
+export const PROFILE = "Profile";
+export const EDIT_RESUME = "Edit";
+export const RESUMES = "Resumes";
+export const RESUME_BUILDER = "Creative Resume Builder";
+// export const CREATIVE_RESUME = "Creative Resume Builder";
+// export const CREATIVE_RESUME = "Creative Resume Builder";
