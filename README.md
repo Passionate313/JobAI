@@ -1,4 +1,4 @@
-# JobAI
+# 🤖 JobAI
 
 
 Milestone 1 (MVP): Resume Optimization
